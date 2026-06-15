@@ -42,7 +42,7 @@ A equipe utilizará o GitHub Projects com o método Kanban para organizar e acom
     <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
 </figure> 
   
-### Ferramentas
+### Ferramentas [MC- Falta somente essa parte]
 
 [Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
 
