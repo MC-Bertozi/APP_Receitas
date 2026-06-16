@@ -42,7 +42,7 @@ A equipe utilizará o GitHub Projects com o método Kanban para organizar e acom
     <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
 </figure> 
   
-### Ferramentas [MC- Falta somente essa parte]
+### Ferramentas [MC- Falta essa parte]
 
 [Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
 
@@ -57,6 +57,6 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
-### Estratégia de Organização de Codificação 
+### Estratégia de Organização de Codificação [MC- Falta essa parte também kkkk]
 
 Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](http://https://github.com/ICEI-PUC-Minas-PMV-ADS/WebApplicationProject-Template-v2/tree/main/codigo-fonte). Consulte também a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento do projeto.
