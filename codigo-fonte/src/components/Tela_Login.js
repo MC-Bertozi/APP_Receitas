@@ -109,7 +109,7 @@ export default function Tela_Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#206491',
   },
   content: {
     paddingHorizontal: 24,
@@ -182,18 +182,18 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 13,
-    color: '#6366f1',
+    color: '#E62B36',
     fontWeight: '600',
   },
   primaryButton: {
-    backgroundColor: '#9ca3af',
+    backgroundColor: '#FDB350',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
     marginBottom: 24,
   },
   primaryButtonText: {
-    color: '#fff',
+    color: '#E62B36',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -236,6 +236,6 @@ const styles = StyleSheet.create({
   },
   registerText: {
     fontSize: 13,
-    color: '#1a1a2e',
+    color: '#FDB350',
   },
 });
