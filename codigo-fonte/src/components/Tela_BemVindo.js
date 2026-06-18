@@ -7,7 +7,7 @@ export default function Tela_BemVindo({ navigation }) {
       <View style={styles.content}>
         <View style={styles.imageContainer}>
           <Image
-            source={{ uri: 'https://imgur.com/a/GsUvvIl' }}
+            source={require('../assets/icon_sousChef.png')}
             style={styles.image}
             resizeMode="cover"
           />
@@ -27,7 +27,7 @@ export default function Tela_BemVindo({ navigation }) {
         <TouchableOpacity
           style={styles.secondaryButton}
           onPress={() => navigation.navigate('Tela_Login')}
-        >
+          >
           <Text style={styles.secondaryButtonText}>Faça login</Text>
         </TouchableOpacity>
 
@@ -42,7 +42,7 @@ export default function Tela_BemVindo({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#206491',
   },
   content: {
     flex: 1,
@@ -66,41 +66,41 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#1a1a2e',
+    color: '#FDB350',
     marginBottom: 60,
     lineHeight: 32,
   },
   primaryButton: {
     width: '100%',
-    backgroundColor: '#9ca3af',
+    backgroundColor: '#FDB350',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
     marginBottom: 12,
   },
   primaryButtonText: {
-    color: '#fff',
+    color: '#E62B36',
     fontSize: 16,
     fontWeight: '600',
   },
   secondaryButton: {
     width: '100%',
-    backgroundColor: '#fff',
+    backgroundColor: '#E62B36',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
     marginBottom: 40,
     borderWidth: 1,
-    borderColor: '#e0e0e8',
+    borderColor: '#E62B36',
   },
   secondaryButtonText: {
-    color: '#1a1a2e',
+    color: '#FDB350',
     fontSize: 16,
     fontWeight: '600',
   },
   terms: {
     fontSize: 12,
-    color: '#9ca3af',
+    color: '#FDB350',
     textAlign: 'center',
     position: 'absolute',
     bottom: 30,
