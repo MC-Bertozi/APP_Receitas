@@ -108,7 +108,7 @@ export default function Tela_Registro({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#206491',
   },
   content: {
     paddingHorizontal: 24,
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   primaryButton: {
-    backgroundColor: '#9ca3af',
+    backgroundColor: '#FDB350',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   primaryButtonText: {
-    color: '#fff',
+    color: '#E62B36',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -169,11 +169,11 @@ const styles = StyleSheet.create({
   },
   loginText: {
     fontSize: 13,
-    color: '#1a1a2e',
+    color: '#FDB350',
   },
   link: {
     fontSize: 13,
-    color: '#6366f1',
+    color: '#E62B36',
     fontWeight: '600',
   },
 });
