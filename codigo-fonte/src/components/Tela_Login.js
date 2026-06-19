@@ -15,6 +15,7 @@ export default function Tela_Login({ navigation }) {
   const [loading, setLoading] = useState(false);
 
   const fazerLogin = async () => {
+    
     if (!email.trim() || !senha.trim()) {
       Alert.alert('Erro', 'Preencha e-mail e senha!');
       return;
