@@ -1,24 +1,43 @@
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  TouchableOpacity,
-  SafeAreaView,
-  ScrollView,
+  View, Text, TextInput, StyleSheet,
+  TouchableOpacity, SafeAreaView, ScrollView, Alert
 } from 'react-native';
-import { Mail, Lock, Eye, EyeOff, Check } from 'lucide-react-native';
+import { Mail, Eye, EyeOff, Check } from 'lucide-react-native';
+import { ChevronLeft } from 'lucide-react-native';
+import firebase from '../firebase';
 
 export default function Tela_Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [lembrar, setLembrar] = useState(false);
   const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const fazerLogin = async () => {
+    if (!email.trim() || !senha.trim()) {
+      Alert.alert('Erro', 'Preencha e-mail e senha!');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, senha);
+      navigation.navigate('Tela_Inicio');
+    } catch (error) {
+      Alert.alert('Erro ao entrar', error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
+        <TouchableOpacity style={styles.botao} onPress={() => navigation.goBack()}>
+          <ChevronLeft size={28} color="#FDB350" />
+        </TouchableOpacity>
+
         <Text style={styles.title}>Entrar</Text>
         <Text style={styles.subtitle}>Insira seus dados para continuar</Text>
 
@@ -65,33 +84,19 @@ export default function Tela_Login({ navigation }) {
             </View>
             <Text style={styles.checkboxLabel}>Lembre-se de mim</Text>
           </TouchableOpacity>
-
           <TouchableOpacity>
             <Text style={styles.link}>Recuperar senha</Text>
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.primaryButtonText}>Faça login</Text>
+        <TouchableOpacity
+          style={styles.primaryButton}
+          onPress={fazerLogin}
+        >
+          <Text style={styles.primaryButtonText}>
+            {loading ? 'Entrando...' : 'Faça login'}
+          </Text>
         </TouchableOpacity>
-
-        <View style={styles.dividerRow}>
-          <View style={styles.dividerLine} />
-          <Text style={styles.dividerText}>ou</Text>
-          <View style={styles.dividerLine} />
-        </View>
-
-        <View style={styles.socialRow}>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialText}>Facebook</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialText}>Google</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.socialButton}>
-            <Text style={styles.socialText}>Apple</Text>
-          </TouchableOpacity>
-        </View>
 
         <TouchableOpacity
           style={styles.registerLink}
@@ -107,135 +112,23 @@ export default function Tela_Login({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#206491',
-  },
-  content: {
-    paddingHorizontal: 24,
-    paddingTop: 30,
-    paddingBottom: 30,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#1a1a2e',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 13,
-    color: '#9ca3af',
-    textAlign: 'center',
-    marginBottom: 30,
-  },
-  label: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#1a1a2e',
-    marginBottom: 8,
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#f3f4f6',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    marginBottom: 16,
-    height: 50,
-  },
-  input: {
-    flex: 1,
-    fontSize: 14,
-    color: '#1a1a2e',
-  },
-  icon: {
-    marginLeft: 8,
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 24,
-  },
-  checkboxContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  checkbox: {
-    width: 18,
-    height: 18,
-    borderRadius: 4,
-    borderWidth: 1.5,
-    borderColor: '#9ca3af',
-    marginRight: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  checkboxChecked: {
-    backgroundColor: '#1a1a2e',
-    borderColor: '#1a1a2e',
-  },
-  checkboxLabel: {
-    fontSize: 13,
-    color: '#1a1a2e',
-  },
-  link: {
-    fontSize: 13,
-    color: '#E62B36',
-    fontWeight: '600',
-  },
-  primaryButton: {
-    backgroundColor: '#FDB350',
-    paddingVertical: 16,
-    borderRadius: 12,
-    alignItems: 'center',
-    marginBottom: 24,
-  },
-  primaryButtonText: {
-    color: '#E62B36',
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  dividerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  dividerLine: {
-    flex: 1,
-    height: 1,
-    backgroundColor: '#e5e7eb',
-  },
-  dividerText: {
-    marginHorizontal: 12,
-    fontSize: 13,
-    color: '#9ca3af',
-  },
-  socialRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 24,
-    gap: 10,
-  },
-  socialButton: {
-    flex: 1,
-    borderWidth: 1,
-    borderColor: '#e5e7eb',
-    borderRadius: 25,
-    paddingVertical: 14,
-    alignItems: 'center',
-  },
-  socialText: {
-    fontSize: 13,
-    color: '#1a1a2e',
-    fontWeight: '500',
-  },
-  registerLink: {
-    alignItems: 'center',
-  },
-  registerText: {
-    fontSize: 13,
-    color: '#FDB350',
-  },
+  container: { flex: 1, backgroundColor: '#206491' },
+  content: { paddingHorizontal: 24, paddingTop: 30, paddingBottom: 30 },
+  botao: { padding: 4, marginBottom: 8 },
+  title: { fontSize: 28, fontWeight: 'bold', textAlign: 'center', color: '#1a1a2e', marginBottom: 8 },
+  subtitle: { fontSize: 13, color: '#9ca3af', textAlign: 'center', marginBottom: 30 },
+  label: { fontSize: 13, fontWeight: '600', color: '#1a1a2e', marginBottom: 8 },
+  inputContainer: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#f3f4f6', borderRadius: 12, paddingHorizontal: 16, marginBottom: 16, height: 50 },
+  input: { flex: 1, fontSize: 14, color: '#1a1a2e' },
+  icon: { marginLeft: 8 },
+  row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 },
+  checkboxContainer: { flexDirection: 'row', alignItems: 'center' },
+  checkbox: { width: 18, height: 18, borderRadius: 4, borderWidth: 1.5, borderColor: '#9ca3af', marginRight: 8, alignItems: 'center', justifyContent: 'center' },
+  checkboxChecked: { backgroundColor: '#1a1a2e', borderColor: '#1a1a2e' },
+  checkboxLabel: { fontSize: 13, color: '#1a1a2e' },
+  link: { fontSize: 13, color: '#E62B36', fontWeight: '600' },
+  primaryButton: { backgroundColor: '#FDB350', paddingVertical: 16, borderRadius: 12, alignItems: 'center', marginBottom: 24 },
+  primaryButtonText: { color: '#E62B36', fontSize: 16, fontWeight: '600' },
+  registerLink: { alignItems: 'center' },
+  registerText: { fontSize: 13, color: '#FDB350' },
 });
