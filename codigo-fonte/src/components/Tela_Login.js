@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, StyleSheet,
-  TouchableOpacity, SafeAreaView, ScrollView, Alert
+  TouchableOpacity, SafeAreaView, ScrollView, Alert, Pressable
 } from 'react-native';
 import { Mail, Eye, EyeOff, Check } from 'lucide-react-native';
 import { ChevronLeft } from 'lucide-react-native';
@@ -14,23 +14,22 @@ export default function Tela_Login({ navigation }) {
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const fazerLogin = async () => {
-    
-    if (!email.trim() || !senha.trim()) {
-      Alert.alert('Erro', 'Preencha e-mail e senha!');
-      return;
-    }
+const fazerLogin = async () => {
+  if (!email.trim() || !senha.trim()) {
+    Alert.alert('Erro', 'Preencha e-mail e senha!');
+    return;
+  }
 
-    setLoading(true);
-    try {
-      await firebase.auth().signInWithEmailAndPassword(email, senha);
-      navigation.navigate('Tela_Inicio');
-    } catch (error) {
-      Alert.alert('Erro ao entrar', error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+  setLoading(true);
+  try {
+    await firebase.auth().signInWithEmailAndPassword(email, senha);
+    navigation.navigate('Tela_Inicio');
+  } catch (error) {
+    Alert.alert('Erro ao entrar', error.message);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <SafeAreaView style={styles.container}>
@@ -92,7 +91,10 @@ export default function Tela_Login({ navigation }) {
 
         <TouchableOpacity
           style={styles.primaryButton}
-          onPress={fazerLogin}
+          onPress={() => {
+            Alert.alert('teste', 'clicou!');
+            fazerLogin();
+          }}
         >
           <Text style={styles.primaryButtonText}>
             {loading ? 'Entrando...' : 'Faça login'}
