@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { CreditCard, Mail, User, KeyRound, Lock } from 'lucide-react-native';
+import { ChevronLeft } from 'lucide-react-native';
 
 export default function Tela_Registro({ navigation }) {
   const [nome, setNome] = useState('');
@@ -20,6 +21,10 @@ export default function Tela_Registro({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
+      <TouchableOpacity style={styles.botao} onPress={() => navigation.goBack()}>
+        <ChevronLeft size={28} color="#FDB350" />
+      </TouchableOpacity>
+
         <Text style={styles.title}>Inscreva-se</Text>
         <Text style={styles.subtitle}>Crie uma conta</Text>
 
