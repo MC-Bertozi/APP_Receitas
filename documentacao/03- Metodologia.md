@@ -42,21 +42,14 @@ A equipe utilizará o GitHub Projects com o método Kanban para organizar e acom
     <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
 </figure> 
   
-### Ferramentas [MC- Falta essa parte]
+### Ferramentas
 
-[Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
-| Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
-| Hospedagem                          | GitHub Pages                       | http://....                            |
-
-
-### Estratégia de Organização de Codificação [MC- Falta essa parte também kkkk]
-
-Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](http://https://github.com/ICEI-PUC-Minas-PMV-ADS/WebApplicationProject-Template-v2/tree/main/codigo-fonte). Consulte também a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento do projeto.
+| Repositório de código fonte         | GitHub                             | <li><a href="codigo-fonte">Codigos</a></li>                          |
+| Documentos do projeto               | GitHub                             | <li><a href="documentacao">Documentação</a></li>                           |
+| Projeto de Interface                | Miro                             | <li><a href="[documentacao/03-Metodologia.md](https://miro.com/welcomeonboard/Vm9SdUI0NHZ4cEFjbzdnNUJJc0hnMDVwQnNha215Nmpqc3JjeEZCdm53c0FqS3VNdlFYUzlhem5Kelo3V1VwQW4vbUZsUml1ZHk5K3FDemFNazY1b2xtYUxNaWdHMGE5c0daMDlvYmVhLzhWbm9SVGxBL3BpVFJxODk4RGY5U0N0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=698079883691 )"> Link do Miro</a></li>                         |
+| Gerenciamento do Projeto            | GitHub Projects                    | <li><a href="documentacao/03-Metodologia.md"> Metodologia</a></li>                          |
