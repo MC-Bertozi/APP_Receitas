@@ -11,12 +11,15 @@ Essa visualização facilita o entendimento do funcionamento da aplicação e co
 ![UserFlow](./img/userflow%20-%20souschef.jpeg)
 
 ## Protótipo
-
 Desenvolver um protótipo emerge como uma das maneiras mais ágeis e econômicas de validar uma ideia, conceito ou funcionalidade. Isso permite a interação, avaliação, modificação e aprovação das principais características de uma interface antes de entrar na fase de desenvolvimento.
 
 ### Protótipo de baixa fidelidade
-
 Protótipos de baixa fidelidade apresentam de forma simplificada o design da interface e o relacionamento entre suas telas, permitindo a evolução da proposta da solução. Neste projeto, foram utilizados para apoiar a validação dos requisitos e efetuar ajustes com menor impacto no desenvolvimento da aplicação.
+
+*[inserir imagens dos wireframes]*
+
+### Protótipo de alta fidelidade
+O protótipo de alta fidelidade do SousChef foi desenvolvido utilizando o Expo Snack, uma plataforma que permite criar e testar aplicações React Native diretamente no navegador. O app apresenta o visual completo com cores, ícones e navegação entre telas, podendo ser acessado em dispositivos móveis através do QR Code disponibilizado, proporcionando uma experiência próxima do produto final.
 
 | **Tela de Bem-vindo** | **Tela de Login** | **Tela de Cadastro** |
 |:---:|:---:|:---:|
@@ -30,6 +33,7 @@ Protótipos de baixa fidelidade apresentam de forma simplificada o design da int
 |:---:|:---:|:---:|
 | <img src="./img/SousChef_celular_compras.jpeg" width="300"/> | <img src="./img/SousChef_celular_alergias.jpeg" width="300"/> | <img src="./img/SousChef_celular_configuracoes.jpeg" width="300"/> |
 
+**Link para acesso no Expo Snack:** *[inserir link do Snack]*
 
 - ## Mapa de Solução
   
