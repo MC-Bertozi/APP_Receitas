@@ -23,7 +23,7 @@ A equipe utilizará o GitHub Projects com o método Kanban para organizar e acom
 - In Review: tarefas em revisão.
 - Done: tarefas finalizadas e prontas para entrega.
 
-![Kanban do Projeto](.documentacao/img/kanbam_app.png)
+![Kanban do Projeto](./img/kanbam_app.png)
 
 ### Etiquetas
 <p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
