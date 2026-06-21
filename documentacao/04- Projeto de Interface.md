@@ -16,7 +16,9 @@ Desenvolver um protótipo emerge como uma das maneiras mais ágeis e econômicas
 ### Protótipo de baixa fidelidade
 Protótipos de baixa fidelidade apresentam de forma simplificada o design da interface e o relacionamento entre suas telas, permitindo a evolução da proposta da solução. Neste projeto, foram utilizados para apoiar a validação dos requisitos e efetuar ajustes com menor impacto no desenvolvimento da aplicação.
 
-*[inserir imagens dos wireframes]*
+![Prototipo_tela_bemVindo](./img/prototipo_tela_inicial.png)
+![Prototipo_telas](./img/prototipo_telas.png)
+![Prototipo_telas_2](./img/prototipo_telas_2.png)
 
 ### Protótipo de alta fidelidade
 O protótipo de alta fidelidade do SousChef foi desenvolvido utilizando o Expo Snack, uma plataforma que permite criar e testar aplicações React Native diretamente no navegador. O app apresenta o visual completo com cores, ícones e navegação entre telas, podendo ser acessado em dispositivos móveis através do QR Code disponibilizado, proporcionando uma experiência próxima do produto final.
@@ -33,7 +35,10 @@ O protótipo de alta fidelidade do SousChef foi desenvolvido utilizando o Expo S
 |:---:|:---:|:---:|
 | <img src="./img/SousChef_celular_compras.jpeg" width="300"/> | <img src="./img/SousChef_celular_alergias.jpeg" width="300"/> | <img src="./img/SousChef_celular_configuracoes.jpeg" width="300"/> |
 
-**Link para acesso no Expo Snack:** *[inserir link do Snack]*
+**QrCode para acesso no Expo Snack:** 
+
+![QrCode_Snack](./img/qrCode_snack.png)
+
 
 - ## Mapa de Solução
   
