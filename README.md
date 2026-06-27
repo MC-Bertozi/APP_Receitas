@@ -1,4 +1,4 @@
-# Aplicativo de Receitas
+# SousChef
 `CIÊNCIA DA COMPUTAÇÃO`
 
 `ENGENHARIA DE APLICAÇÕES MÓVEIS`
